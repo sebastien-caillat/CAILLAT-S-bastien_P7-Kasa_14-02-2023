@@ -1,10 +1,12 @@
-// import logo from '../../assets/logo'
+import logo from '../../assets/logo.svg'
 import styled from 'styled-components'
 import { StyledLink } from '../../utils/style/Atoms'
 
 const NavContainer = styled.nav`
+    display: flex;
+    justify-content: space-between;
     position: absolute;
-    width: 1240px;
+    width: 90%;
     height: 68px;
     left: 100px;
     top: 40px;
@@ -12,11 +14,6 @@ const NavContainer = styled.nav`
 
 const NavBar = styled.div`
     display: flex;
-    position: absolute;
-    left: 75%;
-    right: 0%;
-    top: 25%;
-    bottom: 25%;
 `
 
 const HomeLogo = styled.img`
@@ -26,7 +23,7 @@ const HomeLogo = styled.img`
 function Header() {
     return(
         <NavContainer>
-            <HomeLogo src='logo' alt='logo-kasa' />
+            <HomeLogo src={logo} alt='logo-kasa' />
             <NavBar>
                 <StyledLink to='/'>
                     Accueil
