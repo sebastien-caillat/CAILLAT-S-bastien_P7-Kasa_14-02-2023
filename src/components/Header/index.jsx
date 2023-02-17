@@ -8,12 +8,15 @@ const NavContainer = styled.nav`
     position: absolute;
     width: 90%;
     height: 68px;
-    left: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
     top: 40px;
 `
 
 const NavBar = styled.div`
     display: flex;
+    position: relative;
+    left: 35px;
 `
 
 const HomeLogo = styled.img`

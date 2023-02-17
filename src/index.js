@@ -7,7 +7,7 @@ import About from './pages/About'
 import Error from './components/Error'
 import Header from './components/Header'
 import GlobalStyle from './utils/style/GlobalStyle';
-// import Footer from './components/Footer'
+import Footer from './components/Footer'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,7 +21,7 @@ root.render(
         <Route path='/about' element ={<About />}></Route>
         <Route path='*' element={<Error />}></Route>
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   </React.StrictMode>
 );

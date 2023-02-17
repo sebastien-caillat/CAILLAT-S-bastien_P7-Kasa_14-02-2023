@@ -1,19 +1,36 @@
-// import footerLogo from '../../assets/logo-footer'
+import footerLogo from '../../assets/logo-footer.svg'
 import styled from 'styled-components'
 
 const StyledFooter = styled.div`
-    background-color: '#000000';
-    position: relative;
-    width: 375px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 860px;
+    background-color: #000000;
+    width: 100%;
+    position: absolute;
     height: 209px;
+    clear: both;
 `
+
+const StyledFooterImg = styled.img`
+    width: 7%;
+    padding-top: 2%;
+`
+
+const StyledFooterText = styled.p`
+    color: #FFFFFF;
+    font-size: 24px;
+`
+
 function Footer() {
     return(
         <StyledFooter>
-            <img src='footerLogo' alt='logo-kasa' />
-            <p>
+            <StyledFooterImg src={footerLogo} alt='logo-kasa' />
+            <StyledFooterText>
                 © 2020 Kasa. All rights reserved
-            </p>
+            </StyledFooterText>
         </StyledFooter>
     )
 }

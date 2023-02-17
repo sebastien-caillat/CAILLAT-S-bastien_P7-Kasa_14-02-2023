@@ -9,6 +9,7 @@ const StyledGlobalStyle = createGlobalStyle`
     body {
         background-color: ${colors.background};
         margin: 0;
+        overflow: auto;
     }
 `
 
