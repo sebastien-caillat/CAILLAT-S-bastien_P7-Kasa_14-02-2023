@@ -15,19 +15,22 @@ const CardGallery = styled.div`
     border-radius: 25px;
 `
 const CardItem = styled.div`
-    padding: 20px;
+    margin: 30px;
     width: 340px;
     height: 340px;
-    border: 2px solid black;
     border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
 `
 const CardImg = styled.img`
     width: 100%;
+    height: 240px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 `
 const CardTitle = styled.h2`
     font-size: 18px;
+    color: #FFFFFF;
+    padding-left: 15px;
 `
 const housingCard = housing;
 
