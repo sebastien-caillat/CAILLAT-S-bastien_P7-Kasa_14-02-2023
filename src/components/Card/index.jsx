@@ -7,9 +7,9 @@ const CardGallery = styled.div`
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     margin-top: 450px;
-    margin-bottom: -800px;
+    margin-bottom: 60px;
     width: 90%;
     height: auto;
     background-color: ${colors.backgroundCard};

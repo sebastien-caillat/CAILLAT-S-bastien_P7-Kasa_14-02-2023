@@ -4,20 +4,24 @@ import { StyledLinkErrorPage } from "../../utils/style/Atoms"
 
 const ErrorDiv = styled.div`
     display: flex;
-    position: absolute;
     width: 100%;
     height: auto;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 850px;
+    @media(max-width: 768px) {
+        margin-top: 600px;
+    }
 `
 const Error404 = styled.h1`
     position: absolute;
     color: ${colors.primary};
     font-size: 288px;
+    bottom: 350px;
     @media(max-width: 768px) {
         font-size: 96px;
-        top: 170px;
+        top: 160px;
     }
 `
 const ErrorTxt = styled.p`

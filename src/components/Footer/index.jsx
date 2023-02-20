@@ -6,21 +6,24 @@ const StyledFooter = styled.div`
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    margin-top: 860px;
     background-color: #000000;
     width: 100%;
-    position: absolute;
     height: 209px;
+    position: absolute;
 `
 
 const StyledFooterImg = styled.img`
     width: 122px;
-    padding-top: 2%;
+    padding-top: 35px;
 `
 
 const StyledFooterText = styled.p`
     color: #FFFFFF;
     font-size: 24px;
+    @media(max-width: 768px) {
+        font-size: 12px;
+        padding-bottom: 30px;
+    }
 `
 
 function Footer() {

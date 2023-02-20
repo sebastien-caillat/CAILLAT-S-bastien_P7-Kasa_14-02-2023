@@ -8,7 +8,8 @@ const StyledGlobalStyle = createGlobalStyle`
 
     body {
         background-color: ${colors.background};
-        margin: auto;
+        margin: 0;
+        padding: 0;
         overflow: auto;
     }
 `
