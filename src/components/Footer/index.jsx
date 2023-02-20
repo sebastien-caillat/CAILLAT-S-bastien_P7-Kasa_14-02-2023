@@ -15,7 +15,7 @@ const StyledFooter = styled.div`
 `
 
 const StyledFooterImg = styled.img`
-    width: 7%;
+    width: 122px;
     padding-top: 2%;
 `
 

@@ -11,16 +11,32 @@ const NavContainer = styled.nav`
     margin-left: 100px;
     margin-right: 100px;
     top: 40px;
+    z-index: 999;
+    @media(max-width: 1024px) {
+        margin-left: 45px;
+    }
+    @media(max-width: 768px) {
+        margin: 20px;
+        top: 0px;
+    }
 `
 
 const NavBar = styled.div`
     display: flex;
     position: relative;
-    left: 35px;
+    @media(max-width: 1024px) {
+        margin-right: 10px;
+    }
+    @media(max-width: 768px) {
+        margin-right: 0;
+    }
 `
 
 const HomeLogo = styled.img`
     height: 68px;
+    @media(max-width: 768px) {
+        height: 47px;
+    }
 `
 
 function Header() {

@@ -4,13 +4,25 @@ import colors from './colors'
 
 export const StyledLink = styled(Link)`
     font-size: 24px;
+    line-height: 2.3;
     color: ${colors.primary};
-    padding: 50px;
     display: flex;
     align-items: flex-end;
-    text-align: right;
     text-decoration: none;
+    margin-left: 57px;
     &:hover{
         text-decoration-line: underline;
     }
+    @media(max-width: 768px) {
+        font-size: 12px;
+        text-transform: uppercase;
+        line-height: 5;
+        padding: 10px;
+        margin-left: 10px;
+    }
+`
+
+export const StyledLinkErrorPage = styled(Link)`
+    font-size: 24px;
+    color: ${colors.primary};
 `
