@@ -9,7 +9,6 @@ const NavContainer = styled.nav`
     width: 90%;
     height: 68px;
     margin-left: 100px;
-    margin-right: 100px;
     top: 40px;
     z-index: 999;
     @media(max-width: 1024px) {
@@ -28,7 +27,7 @@ const NavBar = styled.div`
         margin-right: 10px;
     }
     @media(max-width: 768px) {
-        margin-right: 0;
+        margin-left: 25px;
     }
 `
 

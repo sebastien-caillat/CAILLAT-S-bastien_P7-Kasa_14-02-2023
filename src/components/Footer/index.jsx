@@ -11,7 +11,6 @@ const StyledFooter = styled.div`
     width: 100%;
     position: absolute;
     height: 209px;
-    clear: both;
 `
 
 const StyledFooterImg = styled.img`
