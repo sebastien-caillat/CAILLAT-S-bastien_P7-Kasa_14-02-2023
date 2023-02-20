@@ -14,6 +14,12 @@ const CardGallery = styled.div`
     height: auto;
     background-color: ${colors.backgroundCard};
     border-radius: 25px;
+    @media(max-width: 768px) {
+        background-color: #FFFFFF;
+        width: 100%;
+        margin-top: 165px;
+        margin-bottom: 0px;
+    }
 `
 const CardItem = styled.div`
     position: relative;
@@ -26,6 +32,10 @@ const CardItem = styled.div`
     height: 340px;
     border-radius: 10px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    @media(max-width: 768px) {
+        margin-bottom: 0px;
+        margin-top: 25px;
+    }
 `
 const CardImg = styled.img`
     width: 100%;

@@ -15,6 +15,10 @@ const BannerImg = styled.div`
   border-radius: 25px;
   mix-blend-mode: darken;
   margin-bottom: 30px;
+  @media(max-width: 768px) {
+    height: 111px;
+    margin-top: 85px;
+  }
 `
 const Title = styled.h1`
   font-size: 48px;
@@ -22,14 +26,18 @@ const Title = styled.h1`
   position: absolute;
   display: flex;
   justify-content: center;
-
+  @media(max-width: 768px) {
+    font-size: 24px;
+    width: 50px;
+    right: 200px;
+  }
 `
 
 function Banner() {
     return(
     <BannerImg>
       <Title>
-        Chez vous, partout et ailleurs
+        Chez&nbsp;vous, partout&nbsp;et&nbsp;ailleurs
       </Title>
     </BannerImg>
     )

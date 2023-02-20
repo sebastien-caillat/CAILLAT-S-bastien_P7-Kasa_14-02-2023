@@ -10,9 +10,6 @@ const ErrorDiv = styled.div`
     align-items: center;
     text-align: center;
     margin-top: 850px;
-    @media(max-width: 768px) {
-        margin-top: 600px;
-    }
 `
 const Error404 = styled.h1`
     position: absolute;
