@@ -41,7 +41,9 @@ const CardImg = styled.img`
     width: 100%;
     height: 340px;
     border-radius: 10px;
+    opacity: 0.6;
 `
+
 const CardTitle = styled.p`
     position: absolute;
     bottom: 10px;

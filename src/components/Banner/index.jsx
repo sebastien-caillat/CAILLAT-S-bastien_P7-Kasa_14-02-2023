@@ -3,18 +3,17 @@ import natureBackground from '../../assets/nature-background.svg'
 
 const BannerImg = styled.div`
   position: absolute;
-  background-image: url(${natureBackground});
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)), url(${natureBackground});
   background-repeat: 'no-repeat';
   background-size: cover;
   background-position: center;
   display: grid;
   place-items: center;
   margin-top: 170px;
+  margin-bottom: 30px;
   height: 223px;
   width: 90%;
   border-radius: 25px;
-  mix-blend-mode: darken;
-  margin-bottom: 30px;
   @media(max-width: 768px) {
     height: 111px;
     margin-top: 85px;
