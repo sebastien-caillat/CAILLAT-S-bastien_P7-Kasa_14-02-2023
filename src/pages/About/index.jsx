@@ -5,17 +5,31 @@ import Collapse from "../../components/Collapse"
 const StyledAbout = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
     margin-bottom: 860px;
     margin-right: 10px;
-    align-items: center;
+`
+
+const StyledCollapseDiv = styled.div`
+    margin-top: 450px;
+    margin-bottom: -350px;
+    width: 75%;
+    height: 47px;
 `
 
 function About() {
     return(
         <StyledAbout>
             <Banner />
-            <Collapse>
-            </Collapse>
+            <StyledCollapseDiv>
+                <Collapse></Collapse>
+                <Collapse></Collapse>
+                <Collapse></Collapse>
+                <Collapse></Collapse>
+            </StyledCollapseDiv>
         </StyledAbout>        
     )
 }
