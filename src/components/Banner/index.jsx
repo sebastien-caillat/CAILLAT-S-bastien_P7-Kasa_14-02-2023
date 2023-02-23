@@ -1,9 +1,10 @@
 import styled from "styled-components"
-import natureBackground from '../../assets/nature-background.svg'
+import homeBanner from '../../assets/home-banner.svg'
+import aboutBanner from '../../assets/about-banner.svg'
 
 const BannerImg = styled.div`
   position: absolute;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)), url(${natureBackground});
+  // background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)), url(${homeBanner});
   background-repeat: 'no-repeat';
   background-size: cover;
   background-position: center;
@@ -32,14 +33,26 @@ const Title = styled.h1`
   }
 `
 
-function Banner() {
+function Banner(props) {
+
+  if (props.origin === 'home') {
     return(
-    <BannerImg>
+    <BannerImg  style = {{
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${homeBanner})`,
+      }}>
       <Title>
         Chez&nbsp;vous, partout&nbsp;et&nbsp;ailleurs
       </Title>
     </BannerImg>
+    )   
+  } else if (props.origin === 'about') {
+    return(
+      <BannerImg  style = {{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${aboutBanner})`,
+      }} />
     )
+  }
+
 }
 
 export default Banner

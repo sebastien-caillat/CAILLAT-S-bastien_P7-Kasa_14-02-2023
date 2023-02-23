@@ -9,7 +9,7 @@ const HomeWrapper = styled.div`
 function Home() {
   return (
     <HomeWrapper>
-      <Banner />
+      <Banner origin='home' />
       <Card />
     </HomeWrapper>
   );

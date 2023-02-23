@@ -16,18 +16,15 @@ const StyledAbout = styled.div`
 const StyledCollapseDiv = styled.div`
     margin-top: 450px;
     margin-bottom: -350px;
-    width: 75%;
+    width: 80%;
     height: 47px;
 `
 
 function About() {
     return(
         <StyledAbout>
-            <Banner />
+            <Banner origin='about' />
             <StyledCollapseDiv>
-                <Collapse></Collapse>
-                <Collapse></Collapse>
-                <Collapse></Collapse>
                 <Collapse></Collapse>
             </StyledCollapseDiv>
         </StyledAbout>        
