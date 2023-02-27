@@ -4,7 +4,6 @@ import aboutBanner from '../../assets/about-banner.svg'
 
 const BannerImg = styled.div`
   position: absolute;
-  // background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)), url(${homeBanner});
   background-repeat: 'no-repeat';
   background-size: cover;
   background-position: center;
