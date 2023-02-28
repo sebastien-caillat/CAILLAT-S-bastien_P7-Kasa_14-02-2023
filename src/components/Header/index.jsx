@@ -8,14 +8,18 @@ const NavContainer = styled.nav`
     position: absolute;
     width: 90%;
     height: 68px;
-    margin-left: 100px;
+    margin-left: 110px;
     top: 40px;
     z-index: 999;
+    @media(max-width: 1324px) {
+        margin-left: 65px;
+    }
     @media(max-width: 1024px) {
         margin-left: 45px;
     }
     @media(max-width: 768px) {
-        margin: 20px;
+        width: 92%;
+        margin: 20px 0px 0px 25px;
         top: 0px;
     }
 `
@@ -23,12 +27,6 @@ const NavContainer = styled.nav`
 const NavBar = styled.div`
     display: flex;
     position: relative;
-    @media(max-width: 1024px) {
-        margin-right: 10px;
-    }
-    @media(max-width: 768px) {
-        margin-left: 25px;
-    }
 `
 
 const HomeLogo = styled.img`

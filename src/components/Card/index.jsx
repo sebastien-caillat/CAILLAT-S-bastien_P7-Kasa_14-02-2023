@@ -9,7 +9,6 @@ const CardGallery = styled.div`
     padding-top: 30px;
     padding-bottom: 40px;
     margin-top: 450px;
-    margin-bottom: 60px;
     width: 90%;
     height: auto;
     background-color: ${colors.backgroundCard};
@@ -18,14 +17,14 @@ const CardGallery = styled.div`
         background-color: #FFFFFF;
         width: 100%;
         margin-top: 165px;
-        margin-bottom: 0px;
+        margin-bottom: -120px;
     }
 `
 const CardItem = styled.div`
     position: relative;
     text-align: left;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
     margin-bottom: 40px;
     margin-top: 40px;
     width: 340px;

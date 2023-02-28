@@ -9,8 +9,10 @@ const StyledAbout = styled.div`
     justify-content: flex-start;
     width: 100%;
     height: auto;
-    margin-bottom: 780px;
-    margin-right: 10px;
+    margin-bottom: 500px;
+    @media(max-width: 768px) {
+        margin-bottom: 280px;
+    }
 `
 
 function About() {

@@ -15,8 +15,11 @@ const BannerImg = styled.div`
   width: 90%;
   border-radius: 25px;
   @media(max-width: 768px) {
-    height: 111px;
+    border-radius: 10px;
     margin-top: 85px;
+    height: ${props =>
+      props.origin === 'about' ? '223px' 
+      : '111px' };
   }
 `
 const Title = styled.h1`
@@ -28,7 +31,7 @@ const Title = styled.h1`
   @media(max-width: 768px) {
     font-size: 24px;
     width: 50px;
-    right: 200px;
+    margin-right: 75px;
   }
 `
 
@@ -46,7 +49,7 @@ function Banner(props) {
     )   
   } else if (props.origin === 'about') {
     return(
-      <BannerImg  style = {{
+      <BannerImg origin='about' style = {{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${aboutBanner})`,
       }} />
     )

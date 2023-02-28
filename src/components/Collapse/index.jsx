@@ -6,7 +6,7 @@ import { useState } from "react";
 const StyledCollapse = styled.div`
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    width: 75%;
     position: relative;
     top: 500px;
     line-height: 0.5;
@@ -15,7 +15,10 @@ const StyledCollapse = styled.div`
     margin: 15px;
     border-radius: 5px;
     background-color: ${colors.primary};
-    z-index: 999;
+    @media(max-width: 768px) {
+        width: 90%;
+        top: 325px;
+    }
 `
 
 const StyledToggleButton = styled.button`
@@ -28,19 +31,25 @@ const StyledTitle = styled.h2`
     font-size: 24px;
     color: #FFFFFF;
     padding-left: 12px;
+    @media(max-width: 768px) {
+        font-size: 13px;
+    }
 `
 
 const StyledToggleDiv = styled.div`
     background-color: ${colors.backgroundCard};
-    border-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     line-height: 1.5;
-    z-index: 1;
 `
 
 const StyledToggleTxt = styled.p`
     font-size: 24px;
     color: ${colors.primary};
     margin-left: 12px;
+    @media(max-width: 768px) {
+        font-size: 12px;
+    }
 `
 
 function Collapse(props) {

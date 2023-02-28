@@ -10,12 +10,15 @@ const ErrorDiv = styled.div`
     align-items: center;
     text-align: center;
     margin-top: 850px;
+    @media(max-width: 768px) {
+        margin-bottom: -280px;
+    }
 `
 const Error404 = styled.h1`
     position: absolute;
     color: ${colors.primary};
     font-size: 288px;
-    bottom: 350px;
+    bottom: 430px;
     @media(max-width: 768px) {
         font-size: 96px;
         top: 160px;
