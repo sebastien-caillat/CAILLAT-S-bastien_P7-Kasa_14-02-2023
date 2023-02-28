@@ -28,6 +28,9 @@ const StyledToggleButton = styled.button`
 `
 
 const StyledToggleImg = styled.img`
+    transform: ${props =>
+        props.isOpen === 'true' ? 'rotate(180deg)'
+        : 'null'};
     @media(max-width: 768px) {
         width: 18px;
     }
@@ -71,7 +74,7 @@ function Collapse(props) {
           <StyledCollapse>
           <StyledTitle>{props.label}</StyledTitle>
           <StyledToggleButton onClick={toggle}>
-            <StyledToggleImg src={vector} alt='' />
+            <StyledToggleImg src={vector} alt='' isOpen={ open ? 'true' : 'false' }/>
           </StyledToggleButton>
           {open && 
             <StyledToggleDiv>
