@@ -12,12 +12,12 @@ const StyledCollapse = styled.div`
     line-height: 0.5;
     align-items: center;
     justify-content: space-between;
-    margin: 15px;
+    margin: 5px;
     border-radius: 5px;
     background-color: ${colors.primary};
     @media(max-width: 768px) {
         width: 90%;
-        top: 325px;
+        top: 330px;
     }
 `
 
@@ -25,6 +25,12 @@ const StyledToggleButton = styled.button`
     background-color: ${colors.primary};
     border: none;
     margin-right: 15px;
+`
+
+const StyledToggleImg = styled.img`
+    @media(max-width: 768px) {
+        width: 18px;
+    }
 `
 
 const StyledTitle = styled.h2`
@@ -64,7 +70,9 @@ function Collapse(props) {
     return (
           <StyledCollapse>
           <StyledTitle>{props.label}</StyledTitle>
-          <StyledToggleButton onClick={toggle}><img src={vector} alt='' /></StyledToggleButton>
+          <StyledToggleButton onClick={toggle}>
+            <StyledToggleImg src={vector} alt='' />
+          </StyledToggleButton>
           {open && 
             <StyledToggleDiv>
                 <StyledToggleTxt>
