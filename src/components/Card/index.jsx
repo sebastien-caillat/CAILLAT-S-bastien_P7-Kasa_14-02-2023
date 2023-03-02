@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import colors from '../../utils/style/colors'
 import housing from '../data/logements.json'
+import { useNavigate } from 'react-router-dom'
 
 const CardGallery = styled.div`
     display: flex;
@@ -23,14 +24,14 @@ const CardGallery = styled.div`
 const CardItem = styled.div`
     position: relative;
     text-align: left;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 40px;
-    margin-top: 40px;
+    margin: 40px 30px 40px 30px;
     width: 340px;
     height: 340px;
     border-radius: 10px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    &:hover {
+        cursor: pointer;
+    }
     @media(max-width: 768px) {
         margin-bottom: 0px;
         margin-top: 25px;
@@ -57,10 +58,13 @@ const CardTitle = styled.p`
 const housingCard = housing;
 
 function Card() {
+
+    const navigate = useNavigate();
+
     return(
         <CardGallery>
             {housingCard.map(({ id, title, cover }) => (
-                <CardItem key={id} cover={cover} title={title}>
+                <CardItem key={id} onClick={() => {navigate(`/housing/${id}`)}}>
                     <CardImg src={cover} alt='' />
                     <CardTitle>{title}</CardTitle>
                 </CardItem>                

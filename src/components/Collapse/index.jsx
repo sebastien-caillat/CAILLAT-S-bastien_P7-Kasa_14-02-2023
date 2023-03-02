@@ -56,6 +56,7 @@ const StyledToggleTxt = styled.p`
     font-size: 24px;
     color: ${colors.primary};
     margin-left: 12px;
+    margin-right: 12px;
     @media(max-width: 768px) {
         font-size: 12px;
     }
