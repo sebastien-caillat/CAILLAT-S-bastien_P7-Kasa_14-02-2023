@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import homeBanner from '../../assets/home-banner.svg'
-import aboutBanner from '../../assets/about-banner.svg'
+import homeBanner from '../../assets/home-banner.png'
+import aboutBanner from '../../assets/about-banner.png'
 
 const BannerImg = styled.div`
   position: absolute;
