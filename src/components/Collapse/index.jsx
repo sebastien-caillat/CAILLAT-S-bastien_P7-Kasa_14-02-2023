@@ -6,7 +6,9 @@ import { useState } from "react";
 const StyledCollapse = styled.div`
     display: flex;
     flex-wrap: wrap;
-    width: 75%;
+    width : ${props =>
+        props.origin === 'housing' ? '40%' 
+        : '75%' };
     position: relative;
     top: 500px;
     line-height: 0.5;
@@ -69,29 +71,37 @@ function Collapse(props) {
         setOpen(!open);
     };
 
-    if (props.origin === 'about') {
-
-    return (
-          <StyledCollapse>
-          <StyledTitle>{props.label}</StyledTitle>
-          <StyledToggleButton onClick={toggle}>
-            <StyledToggleImg src={vector} alt='' isOpen={ open ? 'true' : 'false' }/>
-          </StyledToggleButton>
-          {open && 
-            <StyledToggleDiv>
-                <StyledToggleTxt>
-                    {props.children}
-                </StyledToggleTxt>
-            </StyledToggleDiv>
-          } 
-          </StyledCollapse>
-    )
-
-    } else {
-        return(
-            <div>
-                <p>En construction</p>
-            </div>
+    if(props.origin === 'about') {
+        return (
+            <StyledCollapse>
+            <StyledTitle>{props.label}</StyledTitle>
+            <StyledToggleButton onClick={toggle}>
+                <StyledToggleImg src={vector} alt='' isOpen={ open ? 'true' : 'false' }/>
+            </StyledToggleButton>
+            {open && 
+                <StyledToggleDiv>
+                    <StyledToggleTxt>
+                        {props.children}
+                    </StyledToggleTxt>
+                </StyledToggleDiv>
+            } 
+            </StyledCollapse>
+        )
+    } else if (props.origin === 'housing') {
+        return (
+            <StyledCollapse origin='housing'>
+            <StyledTitle>{props.label}</StyledTitle>
+            <StyledToggleButton onClick={toggle}>
+                <StyledToggleImg src={vector} alt='' isOpen={ open ? 'true' : 'false' }/>
+            </StyledToggleButton>
+            {open && 
+                <StyledToggleDiv>
+                    <StyledToggleTxt>
+                        {props.children}
+                    </StyledToggleTxt>
+                </StyledToggleDiv>
+            } 
+            </StyledCollapse>
         )
     }
 }

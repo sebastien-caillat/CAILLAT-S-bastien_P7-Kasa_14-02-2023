@@ -29,7 +29,7 @@ const StyledPreviousButton = styled.button`
     transform: rotate(90deg);
     width: 47px;
     height: 80px;
-    position: fixed;
+    position: absolute;
     top: 310px;
     left: 70px;
     border: none;
@@ -44,7 +44,7 @@ const StyledNextButton = styled.button`
     transform: rotate(-90deg);
     width: 47px;
     height: 80px;
-    position: fixed;
+    position: absolute;
     top: 310px;
     right: 70px;
     border: none;
