@@ -3,6 +3,7 @@ import Collapse from "../../components/Collapse"
 import { CarouselItem } from "../../components/Carousel"
 import styled from "styled-components"
 import colors from "../../utils/style/colors"
+import star from "../../assets/star.png"
 
 const StyledHousing = styled.div`
     display: flex;
@@ -39,6 +40,28 @@ const StyledTagText = styled.p`
     color: #FFFFFF;
 `
 
+const StyledHostInfos = styled.div`
+    display: flex;
+    margin-top: 30px;
+`
+
+const StyledHostName = styled.p`
+    font-size: 18px;
+    color: ${colors.primary};
+    margin-right: 10px;
+`
+
+const StyledHostPicture = styled.div`
+    width: 64px;
+    height: 64px;
+    background-color: #c4c4c4;
+    border-radius: 50%;
+`
+
+const StyledRating = styled.div`
+    margin: 15px;
+`
+
 const StyledCollapseHousing = styled.div`
     display: flex;
     flex-direction: row;
@@ -67,6 +90,21 @@ function Housing() {
                     </StyledTagText>
                 </StyledTag>
             </StyledHousingInfos>
+            <StyledHostInfos>
+                <StyledHostName>
+                    Alexandre Dumas
+                </StyledHostName>
+                <StyledHostPicture>
+
+                </StyledHostPicture>
+                <StyledRating>
+                    <img src={star} alt='' />
+                    <img src={star} alt='' />
+                    <img src={star} alt='' />
+                    <img src={star} alt='' />
+                    <img src={star} alt='' />
+                </StyledRating>
+            </StyledHostInfos>
             <StyledCollapseHousing>
             <Collapse origin='housing' label='Description'>
             <p>
