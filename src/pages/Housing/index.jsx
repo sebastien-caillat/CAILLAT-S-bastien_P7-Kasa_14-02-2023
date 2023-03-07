@@ -42,13 +42,17 @@ const StyledTagText = styled.p`
 
 const StyledHostInfos = styled.div`
     display: flex;
+    flex-wrap: wrap;
+    max-width: 240px;
     margin-top: 30px;
+
 `
 
 const StyledHostName = styled.p`
     font-size: 18px;
     color: ${colors.primary};
     margin-right: 10px;
+    max-width: 90px;
 `
 
 const StyledHostPicture = styled.div`
@@ -59,7 +63,10 @@ const StyledHostPicture = styled.div`
 `
 
 const StyledRating = styled.div`
-    margin: 15px;
+    display: flex;
+`
+const StyledStar = styled.img`
+    margin: 5px;
 `
 
 const StyledCollapseHousing = styled.div`
@@ -98,22 +105,22 @@ function Housing() {
 
                 </StyledHostPicture>
                 <StyledRating>
-                    <img src={star} alt='' />
-                    <img src={star} alt='' />
-                    <img src={star} alt='' />
-                    <img src={star} alt='' />
-                    <img src={star} alt='' />
+                    <StyledStar src={star} alt='' />
+                    <StyledStar src={star} alt='' />
+                    <StyledStar src={star} alt='' />
+                    <StyledStar src={star} alt='' />
+                    <StyledStar src={star} alt='' />
                 </StyledRating>
             </StyledHostInfos>
             <StyledCollapseHousing>
             <Collapse origin='housing' label='Description'>
             <p>
-            Description
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </p>
             </Collapse>
             <Collapse origin='housing' label='Équipements'>
                 <p>
-                Équipements
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </p>
             </Collapse>
             </StyledCollapseHousing>

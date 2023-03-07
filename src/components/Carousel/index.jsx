@@ -67,7 +67,7 @@ function Carousel({ children }) {
     
         if(newIndex < 0) {
             newIndex = React.Children.count(children) -1;
-        } else if (newIndex > React.Children.count(children)) {
+        } else if (newIndex > React.Children.count(children) -1) {
             newIndex = 0;
         } 
 
