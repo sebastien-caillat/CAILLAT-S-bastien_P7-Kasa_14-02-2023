@@ -1,6 +1,9 @@
+import axios from "axios"
+import { useState, useEffect } from "react"
 import Carousel from "../../components/Carousel"
 import Collapse from "../../components/Collapse"
 import { CarouselItem } from "../../components/Carousel"
+// import Error from "../../components/Error"
 import styled from "styled-components"
 import colors from "../../utils/style/colors"
 import star from "../../assets/star.png"
@@ -77,6 +80,19 @@ const StyledCollapseHousing = styled.div`
 `
 
 function Housing() {
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        axios.get("../../components/data/logements.json")
+            .then((res) => setData(res.data))
+    }, [])
+
+    const housingId = window.location.pathname.substring(8)
+    const retrieveHousing = data.find((housing) => housing.id === housingId)
+
+    // if(!retrieveHousing) return <Error />
+
     return(
         <StyledHousing>
             <Carousel>
