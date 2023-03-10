@@ -21,7 +21,9 @@ const StyledCollapse = styled.div`
     background-color: ${colors.primary};
     @media(max-width: 768px) {
         width: 90%;
-        top: 330px;
+        top: ${props =>
+            props.origin === 'housing' ? '50px' 
+            : '330px' };
     }
 `
 
@@ -42,6 +44,7 @@ const StyledToggleImg = styled.img`
 
 const StyledTitle = styled.h2`
     font-size: 24px;
+    font-weight: normal;
     color: #FFFFFF;
     padding-left: 12px;
     @media(max-width: 768px) {

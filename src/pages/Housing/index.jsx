@@ -22,9 +22,14 @@ const StyledHousingInfos = styled.div`
     @media(max-width: 1200px) {
         right: 8%;
     }
+    @media(max-width: 768px) {
+        right: 14%;
+    }
 `
 
 const StyledHousingTitle = styled.h1`
+    display: flex;
+    flex-wrap: wrap;
     font-size: 36px;
     color: ${colors.primary};
 `
@@ -45,10 +50,17 @@ const StyledTag = styled.div`
     height: 25px;
     border-radius: 10px;
     background-color: ${colors.primary};
+    @media(max-width: 768px) {
+        width: 84px;
+        height: 18px;
+    }
 `
 const StyledTagText = styled.p`
     font-size: 14px;
     color: #FFFFFF;
+    @media(max-width: 768px) {
+        font-size: 10px;
+    }
 `
 
 const StyledHostInfos = styled.div`
@@ -61,6 +73,9 @@ const StyledHostInfos = styled.div`
     @media(max-width: 1200px) {
         left: 12%;
     }
+    @media(max-width: 768px) {
+        left: 0%;
+    }
 `
 
 const StyledHostName = styled.p`
@@ -70,6 +85,12 @@ const StyledHostName = styled.p`
     margin-left: 30px;
     max-width: 90px;
     text-align: right;
+    @media(max-width: 768px) {
+        font-size: 12px;
+        position: relative;
+        left: 45%;
+        bottom: 50%;
+    }
 `
 
 const StyledHostPicture = styled.div`
@@ -77,13 +98,31 @@ const StyledHostPicture = styled.div`
     height: 64px;
     background-color: #c4c4c4;
     border-radius: 50%;
+    @media(max-width: 768px) {
+        width: 32px;
+        height: 32px;
+        position: relative;
+        left: 45%;
+        bottom: 35%;
+    }
 `
 
 const StyledRating = styled.div`
     display: flex;
+    @media(max-width: 768px) {
+        width: 98px;
+        height: 18px;
+        position: relative;
+        right: 27%;
+        bottom: 100%;
+    }
 `
 const StyledStar = styled.img`
     margin: 5px;
+    @media(max-width: 768px) {
+        width: 15px;
+        height: 15px;
+    }
 `
 
 const StyledCollapseHousing = styled.div`
@@ -91,6 +130,10 @@ const StyledCollapseHousing = styled.div`
     flex-direction: row;
     justify-content: space-between; 
     width: 90%;
+    @media(max-width: 768px) {
+        flex-direction: column;
+        margin-top: -100px;
+    }
 `
 
 function Housing() {
