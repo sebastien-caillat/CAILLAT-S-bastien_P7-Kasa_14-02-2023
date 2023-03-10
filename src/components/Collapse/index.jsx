@@ -7,11 +7,11 @@ const StyledCollapse = styled.div`
     display: flex;
     flex-wrap: wrap;
     width : ${props =>
-        props.origin === 'housing' ? '35%' 
+        props.origin === 'housing' ? '45%' 
         : '75%' };
     position: relative;
     top: ${props =>
-        props.origin === 'housing' ? '100px' 
+        props.origin === 'housing' ? '20px' 
         : '500px' };
     line-height: 0.5;
     align-items: center;

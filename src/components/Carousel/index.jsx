@@ -9,12 +9,18 @@ const StyledCarouselItem = styled.div`
     height: 415px;
     background-color: #FF6060;
     color: #ffffff;
+    @media(max-width: 768px) {
+        height: 255px;
+    }
 `
 const StyledCarousel = styled.div`
     overflow: hidden;
     margin-top: 150px;
     width: 90%;
     border-radius: 25px;
+    @media(max-width: 768px) {
+        margin-top: 100px;
+    }
 `
 const StyledInner = styled.div`
     white-space: nowrap;
@@ -34,6 +40,12 @@ const StyledPreviousButton = styled.button`
     left: 70px;
     border: none;
     background-color: #FF6060;
+    @media(max-width: 768px) {
+        width: 12px;
+        height: 20px;
+        top: 212px;
+        left: -25px;
+    }
 `
 
 const StyledNextButton = styled.button`
@@ -49,6 +61,12 @@ const StyledNextButton = styled.button`
     right: 70px;
     border: none;
     background-color: #FF6060;
+    @media(max-width: 768px) {
+        width: 12px;
+        height: 20px;
+        top: 212px;
+        right: -25px;
+    }
 `
 
 export const CarouselItem = ({ children, width }) => {

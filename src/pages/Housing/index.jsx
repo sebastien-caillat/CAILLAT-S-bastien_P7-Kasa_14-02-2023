@@ -1,5 +1,5 @@
-import axios from "axios"
 import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
 import Carousel from "../../components/Carousel"
 import Collapse from "../../components/Collapse"
 import { CarouselItem } from "../../components/Carousel"
@@ -12,12 +12,16 @@ const StyledHousing = styled.div`
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-bottom: 100px;
 `
 
 const StyledHousingInfos = styled.div`
     display: block;
     flex-direction: column;
+    position: relative;
+    right: 14%;
+    @media(max-width: 1200px) {
+        right: 8%;
+    }
 `
 
 const StyledHousingTitle = styled.h1`
@@ -28,11 +32,15 @@ const StyledHousingTitle = styled.h1`
 const StyledHousingLocation = styled.p`
     font-size: 18px;
     color: ${colors.primary};
+    position: relative;
+    bottom: 17px;
 `
 const StyledTag = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    bottom: 10px;
     width: 115px;
     height: 25px;
     border-radius: 10px;
@@ -48,14 +56,20 @@ const StyledHostInfos = styled.div`
     flex-wrap: wrap;
     max-width: 240px;
     margin-top: 30px;
-
+    position: relative;
+    left: 16%;
+    @media(max-width: 1200px) {
+        left: 12%;
+    }
 `
 
 const StyledHostName = styled.p`
     font-size: 18px;
     color: ${colors.primary};
     margin-right: 10px;
+    margin-left: 30px;
     max-width: 90px;
+    text-align: right;
 `
 
 const StyledHostPicture = styled.div`
@@ -81,17 +95,19 @@ const StyledCollapseHousing = styled.div`
 
 function Housing() {
 
-    const [data, setData] = useState([]);
+    const [data, setData] = useState(null);
+    const { housingId } = useParams();
 
     useEffect(() => {
-        axios.get("../../components/data/logements.json")
-            .then((res) => setData(res.data))
-    }, [])
+    fetch("../../components/data/logements.json")
+        .then((res) => res.json())
+        .then((datas) => datas.filter((data) => {
+        return data.id === housingId;
+        }))
+        .then((matched) => setData(matched[0]));
+    }, []);
 
-    const housingId = window.location.pathname.substring(8)
-    const retrieveHousing = data.find((housing) => housing.id === housingId)
-
-    // if(!retrieveHousing) return <Error />
+    console.log(data);
 
     return(
         <StyledHousing>
