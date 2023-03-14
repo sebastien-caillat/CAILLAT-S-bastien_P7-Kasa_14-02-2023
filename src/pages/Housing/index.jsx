@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
+import housing from "../../components/data/logements.json"
 import Carousel from "../../components/Carousel"
 import Collapse from "../../components/Collapse"
 import { CarouselItem } from "../../components/Carousel"
@@ -136,21 +136,20 @@ const StyledCollapseHousing = styled.div`
     }
 `
 
+const housingItem = housing;
+
+console.log(housingItem);
+
 function Housing() {
 
-    const [data, setData] = useState(null);
-    const { housingId } = useParams();
+    const currentPageId = useParams().id;
+    const housingId = housingItem.filter(housing => housing.id === currentPageId);
 
-    useEffect(() => {
-    fetch("../../components/data/logements.json")
-        .then((res) => res.json())
-        .then((datas) => datas.filter((data) => {
-        return data.id === housingId;
-        }))
-        .then((matched) => setData(matched[0]));
-    }, []);
+    console.log("CURRENT PAGE ID");
+    console.log(currentPageId);
 
-    console.log(data);
+    console.log("HOUSING ITEM ID");
+    console.log(housingId);
 
     return(
         <StyledHousing>
