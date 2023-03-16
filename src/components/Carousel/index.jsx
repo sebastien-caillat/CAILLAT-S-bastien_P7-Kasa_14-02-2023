@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import vector from "../../assets/vector.svg"
 
-const StyledCarouselItem = styled.div`
+const StyledCarouselItem = styled.img`
     display: inline-flex;
     align-items: center;
     justify-content: center;
     height: 415px;
-    background-color: #FF6060;
-    color: #ffffff;
     @media(max-width: 768px) {
         height: 255px;
     }

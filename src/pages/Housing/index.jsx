@@ -93,7 +93,7 @@ const StyledHostName = styled.p`
     }
 `
 
-const StyledHostPicture = styled.div`
+const StyledHostPicture = styled.img`
     width: 64px;
     height: 64px;
     background-color: #c4c4c4;
@@ -143,41 +143,40 @@ console.log(housingItem);
 function Housing() {
 
     const currentPageId = useParams().id;
-    const housingId = housingItem.filter(housing => housing.id === currentPageId);
+    const housing = housingItem.filter(housing => housing.id === currentPageId);
 
     console.log("CURRENT PAGE ID");
     console.log(currentPageId);
 
     console.log("HOUSING ITEM ID");
-    console.log(housingId);
+    console.log(housing);
 
     return(
+        housing.map(({ title, pictures, description, host, rating, location, equipments, tags }) => (
         <StyledHousing>
             <Carousel>
-                <CarouselItem>1</CarouselItem>
-                <CarouselItem>2</CarouselItem>
-                <CarouselItem>3</CarouselItem>
+                {pictures.map((picture) => 
+                <CarouselItem src={picture} alt='' />
+                )}
             </Carousel>
             <StyledHousingInfos>
                 <StyledHousingTitle>
-                    Housing Title
+                    {title}
                 </StyledHousingTitle>
                 <StyledHousingLocation>
-                    Location
+                    {location}
                 </StyledHousingLocation>
                 <StyledTag>
                     <StyledTagText>
-                        Exemple
+                        tag
                     </StyledTagText>
                 </StyledTag>
             </StyledHousingInfos>
             <StyledHostInfos>
                 <StyledHostName>
-                    Alexandre Dumas
+                    {host.name}
                 </StyledHostName>
-                <StyledHostPicture>
-
-                </StyledHostPicture>
+                <StyledHostPicture src={host.picture} alt='' />
                 <StyledRating>
                     <StyledStar src={star} alt='' />
                     <StyledStar src={star} alt='' />
@@ -189,7 +188,7 @@ function Housing() {
             <StyledCollapseHousing>
             <Collapse origin='housing' label='Description'>
             <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            {description}
             </p>
             </Collapse>
             <Collapse origin='housing' label='Équipements'>
@@ -199,6 +198,7 @@ function Housing() {
             </Collapse>
             </StyledCollapseHousing>
         </StyledHousing>
+        ))
     )
 }
 
