@@ -6,7 +6,8 @@ import { CarouselItem } from "../../components/Carousel"
 // import Error from "../../components/Error"
 import styled from "styled-components"
 import colors from "../../utils/style/colors"
-import star from "../../assets/star.png"
+import fullstar from "../../assets/star.png"
+import emptystar from "../../assets/emptystar.png"
 
 const StyledHousing = styled.div`
     display: flex;
@@ -40,6 +41,11 @@ const StyledHousingLocation = styled.p`
     position: relative;
     bottom: 17px;
 `
+
+const StyledTagDiv = styled.div`
+    display: flex;
+`
+
 const StyledTag = styled.div`
     display: flex;
     justify-content: center;
@@ -49,6 +55,7 @@ const StyledTag = styled.div`
     width: 115px;
     height: 25px;
     border-radius: 10px;
+    margin-right: 10px;
     background-color: ${colors.primary};
     @media(max-width: 768px) {
         width: 84px;
@@ -166,11 +173,15 @@ function Housing() {
                 <StyledHousingLocation>
                     {location}
                 </StyledHousingLocation>
-                <StyledTag>
+                <StyledTagDiv>
+                {tags.map((tag) => 
+                <StyledTag>                   
                     <StyledTagText>
-                        tag
-                    </StyledTagText>
+                        {tag}
+                    </StyledTagText>                   
                 </StyledTag>
+                )}
+                </StyledTagDiv>
             </StyledHousingInfos>
             <StyledHostInfos>
                 <StyledHostName>
@@ -178,11 +189,12 @@ function Housing() {
                 </StyledHostName>
                 <StyledHostPicture src={host.picture} alt='' />
                 <StyledRating>
-                    <StyledStar src={star} alt='' />
-                    <StyledStar src={star} alt='' />
-                    <StyledStar src={star} alt='' />
-                    <StyledStar src={star} alt='' />
-                    <StyledStar src={star} alt='' />
+                    {[...Array(5)].map((star, index) => {
+                        const ratingValue = index + 1;
+                        return(
+                            <StyledStar src={ratingValue <= rating ? fullstar : emptystar } alt='' />
+                        )
+                    })}
                 </StyledRating>
             </StyledHostInfos>
             <StyledCollapseHousing>
@@ -192,9 +204,11 @@ function Housing() {
             </p>
             </Collapse>
             <Collapse origin='housing' label='Équipements'>
-                <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </p>
+                <ul>
+                    {equipments.map((equipment) =>
+                    <li>{equipment}</li>
+                    )}
+                </ul>
             </Collapse>
             </StyledCollapseHousing>
         </StyledHousing>
