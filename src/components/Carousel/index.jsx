@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import vector from "../../assets/vector.svg"
 
-const StyledCarouselItem = styled.img`
+const StyledCarouselItem = styled.div`
     display: inline-flex;
     align-items: center;
     justify-content: center;

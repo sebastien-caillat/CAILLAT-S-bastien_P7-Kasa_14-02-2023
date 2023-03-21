@@ -15,6 +15,17 @@ const StyledHousing = styled.div`
     flex-wrap: wrap;
 `
 
+const StyledCarouselItemImg = styled.img`
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 415px;
+    width: 100%;
+    @media(max-width: 768px) {
+        height: 255px;
+    }
+`
+
 const StyledHousingInfos = styled.div`
     display: block;
     flex-direction: column;
@@ -163,7 +174,9 @@ function Housing() {
         <StyledHousing>
             <Carousel>
                 {pictures.map((picture) => 
-                <CarouselItem src={picture} alt='' />
+                <CarouselItem>
+                    <StyledCarouselItemImg src={picture} alt='' />
+                </CarouselItem>
                 )}
             </Carousel>
             <StyledHousingInfos>
