@@ -30,13 +30,14 @@ const StyledCarouselItemImg = styled.img`
 const StyledHousingInfos = styled.div`
     display: block;
     flex-direction: column;
-    position: relative;
-    right: 14%;
+    position: absolute;
+    top: 560px;
+    left: 100px;
     @media(max-width: 1200px) {
-        right: 8%;
+        // right: 8%;
     }
     @media(max-width: 768px) {
-        right: 14%;
+        // right: 14%;
     }
 `
 
@@ -87,13 +88,15 @@ const StyledHostInfos = styled.div`
     flex-wrap: wrap;
     max-width: 240px;
     margin-top: 30px;
-    position: relative;
-    left: 16%;
+    position: absolute;
+    top: 560px;
+    right: 50px;
+    // left: 16%;
     @media(max-width: 1200px) {
-        left: 12%;
+        // left: 12%;
     }
     @media(max-width: 768px) {
-        left: 0%;
+        // left: 0%;
     }
 `
 
@@ -149,6 +152,7 @@ const StyledCollapseHousing = styled.div`
     flex-direction: row;
     justify-content: space-between; 
     width: 90%;
+    margin-top: 150px;
     @media(max-width: 768px) {
         flex-direction: column;
         margin-top: -100px;
