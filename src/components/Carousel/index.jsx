@@ -37,7 +37,7 @@ const StyledPreviousButton = styled.button`
     top: 310px;
     left: 70px;
     border: none;
-    background-color: #FF6060;
+    background-color: transparent;
     @media(max-width: 768px) {
         width: 12px;
         height: 20px;
@@ -58,7 +58,7 @@ const StyledNextButton = styled.button`
     top: 310px;
     right: 70px;
     border: none;
-    background-color: #FF6060;
+    background-color: transparent;
     @media(max-width: 768px) {
         width: 12px;
         height: 20px;

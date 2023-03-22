@@ -20,6 +20,7 @@ const StyledCarouselItemImg = styled.img`
     align-items: center;
     justify-content: center;
     height: 415px;
+    object-fit: cover;
     width: 100%;
     @media(max-width: 768px) {
         height: 255px;
