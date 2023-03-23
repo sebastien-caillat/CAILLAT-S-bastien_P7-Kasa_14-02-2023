@@ -59,6 +59,7 @@ const StyledToggleDiv = styled.div`
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     line-height: 1.5;
+    min-width: 100%;
 `
 
 const StyledToggleTxt = styled.p`

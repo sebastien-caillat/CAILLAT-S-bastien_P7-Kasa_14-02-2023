@@ -162,9 +162,9 @@ const StyledStar = styled.img`
 `
 
 const StyledCollapseHousing = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between; 
     width: 90%;
     margin-top: 150px;
     @media(max-width: 768px) {
@@ -186,6 +186,8 @@ function Housing() {
 
     console.log("HOUSING ITEM ID");
     console.log(housing);
+
+    // if(housing === undefined) return <Error />;
 
     return(
         housing.map(({ title, pictures, description, host, rating, location, equipments, tags }) => (
