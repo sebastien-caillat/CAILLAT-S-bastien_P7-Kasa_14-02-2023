@@ -34,10 +34,12 @@ const StyledHousingInfos = styled.div`
     top: 560px;
     left: 100px;
     @media(max-width: 1200px) {
-        // right: 8%;
+        left: 40px;
+        top: 572px;
     }
     @media(max-width: 768px) {
-        // right: 14%;
+        left: 20px;
+        top: 360px;
     }
 `
 
@@ -46,6 +48,13 @@ const StyledHousingTitle = styled.h1`
     flex-wrap: wrap;
     font-size: 36px;
     color: ${colors.primary};
+    @media(max-width: 1200px) {
+        font-size: 30px;
+    }
+    @media(max-width: 768px) {
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
 `
 
 const StyledHousingLocation = styled.p`
@@ -53,6 +62,9 @@ const StyledHousingLocation = styled.p`
     color: ${colors.primary};
     position: relative;
     bottom: 17px;
+    @media(max-width: 768px) {
+        font-size: 14px;
+    }
 `
 
 const StyledTagDiv = styled.div`
@@ -65,7 +77,7 @@ const StyledTag = styled.div`
     align-items: center;
     position: relative;
     bottom: 10px;
-    width: 115px;
+    min-width: 115px;
     height: 25px;
     border-radius: 10px;
     margin-right: 10px;
@@ -73,11 +85,14 @@ const StyledTag = styled.div`
     @media(max-width: 768px) {
         width: 84px;
         height: 18px;
+        min-width: 50px;
+        flex-wrap: wrap;
     }
 `
 const StyledTagText = styled.p`
     font-size: 14px;
     color: #FFFFFF;
+    margin: 0px 10px 0px 10px;
     @media(max-width: 768px) {
         font-size: 10px;
     }
@@ -91,12 +106,12 @@ const StyledHostInfos = styled.div`
     position: absolute;
     top: 560px;
     right: 50px;
-    // left: 16%;
     @media(max-width: 1200px) {
-        // left: 12%;
+        right: 0px;
     }
     @media(max-width: 768px) {
-        // left: 0%;
+        top: 470px;
+        right: 30px;
     }
 `
 
@@ -109,9 +124,8 @@ const StyledHostName = styled.p`
     text-align: right;
     @media(max-width: 768px) {
         font-size: 12px;
-        position: relative;
-        left: 45%;
-        bottom: 50%;
+        position: absolute;
+        right: 25px;
     }
 `
 
@@ -123,9 +137,8 @@ const StyledHostPicture = styled.img`
     @media(max-width: 768px) {
         width: 32px;
         height: 32px;
-        position: relative;
-        left: 45%;
-        bottom: 35%;
+        position: absolute;
+        right: 1px;
     }
 `
 
@@ -134,9 +147,9 @@ const StyledRating = styled.div`
     @media(max-width: 768px) {
         width: 98px;
         height: 18px;
-        position: relative;
-        right: 27%;
-        bottom: 100%;
+        position: absolute;
+        right: 270px;
+        bottom: 5px;
     }
 `
 const StyledStar = styled.img`
@@ -155,7 +168,6 @@ const StyledCollapseHousing = styled.div`
     margin-top: 150px;
     @media(max-width: 768px) {
         flex-direction: column;
-        margin-top: -100px;
     }
 `
 
