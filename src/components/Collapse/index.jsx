@@ -20,9 +20,11 @@ const StyledCollapse = styled.div`
     border-radius: 5px;
     background-color: ${colors.primary};
     @media(max-width: 768px) {
-        width: 90%;
+        width: ${props =>
+            props.origin === 'housing' ? '100%' 
+            : '90%' };
         top: ${props =>
-            props.origin === 'housing' ? '50px' 
+            props.origin === 'housing' ? '40px' 
             : '330px' };
     }
 `

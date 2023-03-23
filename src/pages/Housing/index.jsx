@@ -83,7 +83,7 @@ const StyledTag = styled.div`
     margin-right: 10px;
     background-color: ${colors.primary};
     @media(max-width: 768px) {
-        width: 84px;
+        // width: 84px;
         height: 18px;
         min-width: 50px;
         flex-wrap: wrap;
@@ -125,7 +125,8 @@ const StyledHostName = styled.p`
     @media(max-width: 768px) {
         font-size: 12px;
         position: absolute;
-        right: 25px;
+        right: 20px;
+        top: -10px;
     }
 `
 
@@ -138,7 +139,7 @@ const StyledHostPicture = styled.img`
         width: 32px;
         height: 32px;
         position: absolute;
-        right: 1px;
+        right: -10px;
     }
 `
 
@@ -148,8 +149,8 @@ const StyledRating = styled.div`
         width: 98px;
         height: 18px;
         position: absolute;
-        right: 270px;
-        bottom: 5px;
+        right: 265px;
+        bottom: -20px;
     }
 `
 const StyledStar = styled.img`
