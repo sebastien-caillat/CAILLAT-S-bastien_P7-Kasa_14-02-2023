@@ -172,6 +172,12 @@ const StyledCollapseHousing = styled.div`
     }
 `
 
+const StyledCollapseEquipment = styled.ul`
+    list-style-type: none;
+    position: relative;
+    right: 35px;
+`
+
 const housingItem = housing;
 
 console.log(housingItem);
@@ -237,11 +243,11 @@ function Housing() {
             </p>
             </Collapse>
             <Collapse origin='housing' label='Équipements'>
-                <ul>
+                <StyledCollapseEquipment>
                     {equipments.map((equipment) =>
                     <li>{equipment}</li>
                     )}
-                </ul>
+                </StyledCollapseEquipment>
             </Collapse>
             </StyledCollapseHousing>
         </StyledHousing>
