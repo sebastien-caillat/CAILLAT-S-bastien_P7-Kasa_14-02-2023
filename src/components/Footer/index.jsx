@@ -10,7 +10,7 @@ const StyledFooter = styled.div`
     width: 100%;
     height: 209px;
     position: relative;
-    top: 140px;
+    top: 170px;
 `
 
 const StyledFooterImg = styled.img`
