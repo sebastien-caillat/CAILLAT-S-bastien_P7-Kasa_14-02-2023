@@ -28,7 +28,7 @@ export const StyledLink = styled(Link)`
 
 export const StyledLinkErrorPage = styled(Link)`
     position: absolute;
-    top: 700px;
+    bottom: 80px;
     font-size: 24px;
     color: ${colors.primary};
     @media(max-width: 768px) {

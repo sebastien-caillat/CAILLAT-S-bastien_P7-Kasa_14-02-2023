@@ -26,7 +26,9 @@ const StyledInner = styled.div`
 `
 
 const StyledPreviousButton = styled.button`
-    display: flex;
+    display: ${props =>
+        props.isMultipleImages === 'true' ? 'flex'
+        : 'none'};
     justify-content: center;
     margin: 5px;
     margin-left: 55px;
@@ -47,7 +49,9 @@ const StyledPreviousButton = styled.button`
 `
 
 const StyledNextButton = styled.button`
-    display: flex;
+    display: ${props =>
+        props.isMultipleImages === 'true' ? 'flex'
+        : 'none'};
     justify-content: center;
     margin: 5px;
     margin-right: 55px;
@@ -97,10 +101,10 @@ function Carousel({ children }) {
                     return React.cloneElement(child, { width: '100%' });
                 })}
             </StyledInner>
-            <StyledPreviousButton onClick={() => { updateIndex(activeIndex - 1) }}>
+            <StyledPreviousButton isMultipleImages={React.Children.count(children) > 1 ? 'true' : 'false'} onClick={() => { updateIndex(activeIndex - 1) }}>
                 <img src={vector} alt='' />
             </StyledPreviousButton>
-            <StyledNextButton onClick={() => { updateIndex(activeIndex + 1)}}>
+            <StyledNextButton isMultipleImages={React.Children.count(children) > 1 ? 'true' : 'false'} onClick={() => { updateIndex(activeIndex + 1)}}>
                 <img src={vector} alt='' />
             </StyledNextButton>
         </StyledCarousel>
