@@ -1,13 +1,13 @@
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import housing from "../../components/data/logements.json"
 import Carousel from "../../components/Carousel"
 import Collapse from "../../components/Collapse"
 import { CarouselItem } from "../../components/Carousel"
-// import Error from "../../components/Error"
 import styled from "styled-components"
 import colors from "../../utils/style/colors"
 import fullstar from "../../assets/star.png"
 import emptystar from "../../assets/emptystar.png"
+import { useEffect } from "react"
 
 const StyledHousing = styled.div`
     display: flex;
@@ -184,6 +184,15 @@ function Housing() {
 
     const currentPageId = useParams().id;
     const housing = housingItem.filter(housing => housing.id === currentPageId);
+
+    const navigate = useNavigate();
+    const wrongHousingId = housingItem.find(housing => housing.id === currentPageId);
+
+    useEffect(() => {
+        if(wrongHousingId === undefined) {
+        navigate("/*");
+    }
+    }, [])
 
     return(
         housing.map(({ title, pictures, description, host, rating, location, equipments, tags }) => (
