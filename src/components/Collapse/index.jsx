@@ -9,7 +9,7 @@ const StyledCollapse = styled.div`
     width : ${props =>
         props.origin === 'housing' ? '40%' 
         : '75%' };
-    height: 15%;
+    height: 10%;
     position: relative;
     top: ${props =>
         props.origin === 'housing' ? '160px' 
@@ -58,6 +58,7 @@ const StyledToggleDiv = styled.div`
     border-bottom-left-radius: 5px;
     line-height: 1.5;
     min-width: 100%;
+    min-height: 260px;
 `
 
 const StyledToggleTxt = styled.p`

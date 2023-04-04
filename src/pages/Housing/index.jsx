@@ -127,7 +127,7 @@ const StyledHostName = styled.p`
         font-size: 12px;
         position: absolute;
         right: 20px;
-        top: -10px;
+        top: -30px;
     }
 `
 
@@ -141,6 +141,7 @@ const StyledHostPicture = styled.img`
         height: 32px;
         position: absolute;
         right: -10px;
+        top: -20px;
     }
 `
 
@@ -150,8 +151,8 @@ const StyledRating = styled.div`
         width: 98px;
         height: 18px;
         position: absolute;
-        right: 265px;
-        bottom: -20px;
+        right: 270px;
+        top: -20px;
     }
 `
 const StyledStar = styled.img`
@@ -161,17 +162,6 @@ const StyledStar = styled.img`
         height: 15px;
     }
 `
-
-// const StyledCollapseHousing = styled.div`
-//     // display: flex;
-//     // flex-direction: row;
-//     // justify-content: space-between; 
-//     // width: 90%;
-//     // margin-bottom: 150px;
-//     @media(max-width: 768px) {
-//         // flex-direction: column;
-//     }
-// `
 
 const StyledCollapseEquipment = styled.ul`
     list-style-type: none;
@@ -236,7 +226,6 @@ function Housing() {
                     })}
                 </StyledRating>
             </StyledHostInfos>
-            {/* <StyledCollapseHousing> */}
             <Collapse origin='housing' label='Description'>
             <p>
             {description}
@@ -249,7 +238,6 @@ function Housing() {
                     )}
                 </StyledCollapseEquipment>
             </Collapse>
-            {/* </StyledCollapseHousing> */}
         </StyledHousing>
         ))
     )
