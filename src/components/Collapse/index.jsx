@@ -7,24 +7,22 @@ const StyledCollapse = styled.div`
     display: flex;
     flex-wrap: wrap;
     width : ${props =>
-        props.origin === 'housing' ? '45%' 
+        props.origin === 'housing' ? '40%' 
         : '75%' };
+    height: 15%;
     position: relative;
     top: ${props =>
-        props.origin === 'housing' ? '20px' 
+        props.origin === 'housing' ? '160px' 
         : '500px' };
     line-height: 0.5;
-    align-items: center;
     justify-content: space-between;
     margin: 5px;
     border-radius: 5px;
     background-color: ${colors.primary};
     @media(max-width: 768px) {
-        width: ${props =>
-            props.origin === 'housing' ? '100%' 
-            : '90%' };
+        width: 90%;
         top: ${props =>
-            props.origin === 'housing' ? '40px' 
+            props.origin === 'housing' ? '200px' 
             : '330px' };
     }
 `

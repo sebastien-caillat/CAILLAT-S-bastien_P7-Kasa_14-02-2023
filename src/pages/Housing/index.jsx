@@ -13,6 +13,7 @@ const StyledHousing = styled.div`
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-bottom: 130px;
 `
 
 const StyledCarouselItemImg = styled.img`
@@ -161,16 +162,16 @@ const StyledStar = styled.img`
     }
 `
 
-const StyledCollapseHousing = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
-    width: 90%;
-    margin-top: 150px;
-    @media(max-width: 768px) {
-        flex-direction: column;
-    }
-`
+// const StyledCollapseHousing = styled.div`
+//     // display: flex;
+//     // flex-direction: row;
+//     // justify-content: space-between; 
+//     // width: 90%;
+//     // margin-bottom: 150px;
+//     @media(max-width: 768px) {
+//         // flex-direction: column;
+//     }
+// `
 
 const StyledCollapseEquipment = styled.ul`
     list-style-type: none;
@@ -192,7 +193,7 @@ function Housing() {
         if(wrongHousingId === undefined) {
         navigate("/*");
     }
-    }, [])
+    })
 
     return(
         housing.map(({ title, pictures, description, host, rating, location, equipments, tags }) => (
@@ -235,7 +236,7 @@ function Housing() {
                     })}
                 </StyledRating>
             </StyledHostInfos>
-            <StyledCollapseHousing>
+            {/* <StyledCollapseHousing> */}
             <Collapse origin='housing' label='Description'>
             <p>
             {description}
@@ -248,7 +249,7 @@ function Housing() {
                     )}
                 </StyledCollapseEquipment>
             </Collapse>
-            </StyledCollapseHousing>
+            {/* </StyledCollapseHousing> */}
         </StyledHousing>
         ))
     )
