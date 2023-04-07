@@ -58,7 +58,9 @@ const StyledToggleDiv = styled.div`
     border-bottom-left-radius: 5px;
     line-height: 1.5;
     min-width: 100%;
-    min-height: 260px;
+    min-height: ${props =>
+        props.origin === 'housing' ? '260px' 
+        : '0px' };
 `
 
 const StyledToggleTxt = styled.p`
