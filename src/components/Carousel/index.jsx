@@ -71,6 +71,20 @@ const StyledNextButton = styled.button`
     }
 `
 
+const StyledImgCount = styled.p`
+    font-size: 18px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    left: 50%;
+    right: 50%;
+    top: 500px;
+    position: absolute;
+    @media(max-width: 768px) {
+        display: none;
+    }
+`
+
 export const CarouselItem = ({ children, width }) => {
     return (
         <StyledCarouselItem style={{ width: width }}>
@@ -107,6 +121,9 @@ function Carousel({ children }) {
             <StyledNextButton isMultipleImages={React.Children.count(children) > 1 ? 'true' : 'false'} onClick={() => { updateIndex(activeIndex + 1)}}>
                 <img src={vector} alt='' />
             </StyledNextButton>
+            <StyledImgCount>
+                {activeIndex + 1}/{React.Children.count(children)}
+            </StyledImgCount>
         </StyledCarousel>
     )
 }
