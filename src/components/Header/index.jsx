@@ -6,7 +6,7 @@ const NavContainer = styled.nav`
     display: flex;
     justify-content: space-between;
     position: absolute;
-    width: 90%;
+    width: 95%;
     height: 68px;
     margin-left: 110px;
     top: 40px;
